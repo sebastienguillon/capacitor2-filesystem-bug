@@ -1,0 +1,7 @@
+{
+  "name": "capacitor1-filesystem",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
