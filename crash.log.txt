@@ -1,0 +1,60 @@
+2020-05-18 20:41:59.354 16910-16910/com.sebastienguillon.cap2fs I/Surface: opservice is null false
+2020-05-18 20:41:59.373 16910-17042/com.sebastienguillon.cap2fs V/Capacitor/Plugin: To native (Capacitor plugin): callbackId: 69910929, pluginId: Filesystem, methodName: readdir
+2020-05-18 20:41:59.374 16910-17042/com.sebastienguillon.cap2fs V/Capacitor: callback: 69910929, pluginId: Filesystem, methodName: readdir, methodData: {"directory":"EXTERNAL_STORAGE","path":"\/"}
+2020-05-18 20:41:59.379 16910-17014/com.sebastienguillon.cap2fs V/Capacitor/Filesystem: Permission 'android.permission.READ_EXTERNAL_STORAGE' is granted
+2020-05-18 20:41:59.381 16910-17014/com.sebastienguillon.cap2fs E/Capacitor: Serious error executing plugin
+    java.lang.reflect.InvocationTargetException
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.getcapacitor.PluginHandle.invoke(PluginHandle.java:99)
+        at com.getcapacitor.Bridge$1.run(Bridge.java:515)
+        at android.os.Handler.handleCallback(Handler.java:883)
+        at android.os.Handler.dispatchMessage(Handler.java:100)
+        at android.os.Looper.loop(Looper.java:214)
+        at android.os.HandlerThread.run(HandlerThread.java:67)
+     Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+        at org.json.JSONArray.<init>(JSONArray.java:117)
+        at com.getcapacitor.JSArray.<init>(JSArray.java:25)
+        at com.getcapacitor.JSArray.from(JSArray.java:48)
+        at com.getcapacitor.plugin.Filesystem.readdir(Filesystem.java:410)
+        at java.lang.reflect.Method.invoke(Native Method) 
+        at com.getcapacitor.PluginHandle.invoke(PluginHandle.java:99) 
+        at com.getcapacitor.Bridge$1.run(Bridge.java:515) 
+        at android.os.Handler.handleCallback(Handler.java:883) 
+        at android.os.Handler.dispatchMessage(Handler.java:100) 
+        at android.os.Looper.loop(Looper.java:214) 
+        at android.os.HandlerThread.run(HandlerThread.java:67) 
+
+
+    --------- beginning of crash
+2020-05-18 20:41:59.383 16910-17014/com.sebastienguillon.cap2fs E/AndroidRuntime: FATAL EXCEPTION: CapacitorPlugins
+    Process: com.sebastienguillon.cap2fs, PID: 16910
+    java.lang.RuntimeException: java.lang.reflect.InvocationTargetException
+        at com.getcapacitor.Bridge$1.run(Bridge.java:524)
+        at android.os.Handler.handleCallback(Handler.java:883)
+        at android.os.Handler.dispatchMessage(Handler.java:100)
+        at android.os.Looper.loop(Looper.java:214)
+        at android.os.HandlerThread.run(HandlerThread.java:67)
+     Caused by: java.lang.reflect.InvocationTargetException
+        at java.lang.reflect.Method.invoke(Native Method)
+        at com.getcapacitor.PluginHandle.invoke(PluginHandle.java:99)
+        at com.getcapacitor.Bridge$1.run(Bridge.java:515)
+        at android.os.Handler.handleCallback(Handler.java:883) 
+        at android.os.Handler.dispatchMessage(Handler.java:100) 
+        at android.os.Looper.loop(Looper.java:214) 
+        at android.os.HandlerThread.run(HandlerThread.java:67) 
+     Caused by: java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Class java.lang.Object.getClass()' on a null object reference
+        at org.json.JSONArray.<init>(JSONArray.java:117)
+        at com.getcapacitor.JSArray.<init>(JSArray.java:25)
+        at com.getcapacitor.JSArray.from(JSArray.java:48)
+        at com.getcapacitor.plugin.Filesystem.readdir(Filesystem.java:410)
+        at java.lang.reflect.Method.invoke(Native Method) 
+        at com.getcapacitor.PluginHandle.invoke(PluginHandle.java:99) 
+        at com.getcapacitor.Bridge$1.run(Bridge.java:515) 
+        at android.os.Handler.handleCallback(Handler.java:883) 
+        at android.os.Handler.dispatchMessage(Handler.java:100) 
+        at android.os.Looper.loop(Looper.java:214) 
+        at android.os.HandlerThread.run(HandlerThread.java:67) 
+
+
+    --------- beginning of system
+2020-05-18 20:41:59.429 16910-17014/com.sebastienguillon.cap2fs I/Process: Sending signal. PID: 16910 SIG: 9
